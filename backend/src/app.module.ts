@@ -9,6 +9,7 @@ import { AuthModule } from './auth/auth.module';
 import { TranscriptsModule } from './transcripts/transcripts.module';
 import { Transcript } from './transcripts/transcripts.entity';
 import { TodosModule } from './todos/todos.module';
+import { Todo } from './todos/todos.entity';
 
 @Module({
   imports: [
@@ -27,7 +28,7 @@ import { TodosModule } from './todos/todos.module';
         username: configService.get("DB_USERNAME"),
         password: configService.get("DB_PASSWORD"),
         database: configService.get("DB_DATABASE"),
-        entities: [User, Transcript],
+        entities: [User, Transcript, Todo],
         synchronize: configService.get("NODE_ENV") === "development",
         logging: configService.get('NODE_ENV') === 'development',
       }),
