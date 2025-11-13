@@ -1,8 +1,8 @@
 import { Column, CreateDateColumn, Entity, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
-export enum UserRole{
-    ADMIN = "admin",
-    MEMBER = "member"
+export enum UserRole {
+    ADMIN = 'admin',
+    MEMBER = 'member',
 }
 
 @Entity("users")
